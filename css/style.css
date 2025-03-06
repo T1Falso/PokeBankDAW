@@ -15,17 +15,31 @@
 }
 
 body {
-  display: flex;
   font-family: "PokemonGB", sans-serif;
   font-size: 12px;
+  background-color: var(--neutral);
 }
+
+/* Contenedor principal con sidebar y contenido */
+.container-fluid {
+  display: flex;
+  height: 100vh; /* Para que ocupe toda la pantalla */
+  margin: 0;
+  padding: 0;
+}
+/* Sidebar fija sin espacios adicionales */
 .sidebar {
   width: 250px;
-  height: 100vh;
+  height: 100vh; /* Asegura que ocupe toda la pantalla */
   background-color: var(--contrast);
   color: var(--neutral);
   padding: 15px;
   position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
 }
 .sidebar a {
   text-decoration: none;
@@ -36,25 +50,55 @@ body {
   border-radius: 5px;
   transition: background 0.3s;
 }
+
 .sidebar a:hover {
   background-color: #495057;
 }
-.sidebar .active {
-  background-color: #0d6efd;
-}
+
 .sidebar a i {
   margin-right: 15px;
 }
+
+/* Estilos de Usuario en la Sidebar */
 .user-info {
   position: absolute;
-  bottom: 15px;
+  bottom: 35px;
   left: 15px;
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
+
+.profile-pic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-pic span {
+  margin-top: 15px;
+}
+
+.btn-salir {
+  width: 200px;
+  margin-top: 25px;
+}
+
 .user-info img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   margin-right: 10px;
+}
+
+/* Contenido principal sin el espacio en blanco */
+.main-content-historial,
+.main-content-graficos,
+.main-content-index {
+  flex-grow: 1; /* Para que ocupe el espacio restante */
+  margin-left: 250px; /* Mismo ancho de la sidebar */
+  padding: 20px;
+  width: calc(100% - 250px); /* Ajusta el tamaño correctamente */
+  background-color: var(--neutral);
+  min-height: 100vh; /* Evita que se corte en pantallas más grandes */
 }

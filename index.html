@@ -31,32 +31,42 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <!-- Sidebar (barra lateral de navegación) -->
-    <div class="sidebar">
-      <!-- Logo o imagen principal de la sidebar -->
-      <h4 class="mb-3">
-        <img
-          src="./assets/img/PokeBank-logo.png"
-          alt="Imagen de Sidebar"
-          style="width: 200px; height: auto"
-        />
-      </h4>
+    <!-- Contenedor Principal -->
+    <div class="container-fluid">
+      <!-- Sidebar (barra lateral de navegación) -->
+      <aside class="sidebar">
+        <h4 class="mb-3">
+          <img
+            src="../assets/img/PokeBank-logo.png"
+            alt="Logo"
+            style="width: 200px; height: auto"
+          />
+        </h4>
 
-      <!-- Enlaces de navegación dentro de la sidebar -->
-      <a href="./index.html"><i class="bi bi-speedometer2"></i> Dashboard</a>
-      <!-- Enlace al Dashboard -->
-      <a href="./pages/historial.html"><i class="bi bi-table"></i> Historial</a>
-      <!-- Enlace al Historial -->
-      <a href="./pages/graficos.html"><i class="bi bi-grid"></i> Gráficos</a>
-      <!-- Enlace a la sección de Gráficos -->
+        <a href="../index.html"><i class="bi bi-speedometer2"></i> Dashboard</a>
+        <a href="../pages/historial.html"
+          ><i class="bi bi-table"></i> Historial</a
+        >
+        <a href="../pages/graficos.html"><i class="bi bi-grid"></i> Gráficos</a>
 
-      <!-- Sección de información del usuario en la parte inferior -->
-      <div class="user-info">
-        <img src="./assets/img/headhshot.png" alt="User" />
-        <!-- Imagen del usuario -->
-        <span>Ash Ketchum</span>
-        <!-- Nombre del usuario -->
-      </div>
+        <!-- Sección de información del usuario -->
+        <div class="user-info">
+          <div class="profile-pic">
+            <img src="../assets/img/headhshot.png" alt="User" />
+            <span>Ash Ketchum</span>
+          </div>
+          <div>
+            <button type="button" class="btn btn-outline-danger btn-salir">
+              Salir
+            </button>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Contenido Principal -->
+      <main class="main-content-index">
+        <h1>Dashboard</h1>
+      </main>
     </div>
   </body>
 </html>
