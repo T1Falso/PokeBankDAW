@@ -91,14 +91,35 @@ body {
   margin-right: 10px;
 }
 
-/* Contenido principal sin el espacio en blanco */
 .main-content-historial,
 .main-content-graficos,
 .main-content-index {
-  flex-grow: 1; /* Para que ocupe el espacio restante */
-  margin-left: 250px; /* Mismo ancho de la sidebar */
+  flex-grow: 1;
+  margin-left: 250px;
   padding: 20px;
-  width: calc(100% - 250px); /* Ajusta el tamaño correctamente */
+  width: calc(100% - 250px);
   background-color: var(--neutral);
-  min-height: 100vh; /* Evita que se corte en pantallas más grandes */
+  min-height: 100vh;
+}
+
+/* GRAFICOS */
+
+.chart-container {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  margin-top: 100px;
+}
+
+.titulo-charts {
+  font-size: 15px;
+  font-weight: 800;
+  margin-bottom: 50px;
+}
+
+canvas {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 300px;
 }
