@@ -1,0 +1,6 @@
+# Dependencias de npm
+node_modules/
+package-lock.json
+
+# Configuración del editor (si usas VS Code)
+.vscode/
