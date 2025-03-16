@@ -62,9 +62,84 @@
       </aside>
 
       <!-- Contenido Principal -->
-      <main class="main-content-historial">
-        <h1>Historial</h1>
+      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        <h1 class="mt-3">Historial</h1>
+        <nav class="nav nav-pills mb-3">
+          <a href="#" class="nav-link">Consultar saldo</a>
+          <a href="#" class="nav-link">Depositar</a>
+          <a href="#" class="nav-link">Transferir</a>
+          <a href="#" class="nav-link">Pago de servicios</a>
+          <a href="#" class="nav-link">Salir</a>
+        </nav>
+
+        <section class="card p-4 mb-4 shadow-sm">
+          <h2 class="h4">Consulta de movimientos</h2>
+          <form class="row g-3">
+            <div class="col-md-4">
+              <label for="cuenta" class="form-label">Cuenta:</label>
+              <select id="cuenta" class="form-select">
+                <option selected>Seleccionar</option>
+                <option>Tarjeta de Ahorro</option>
+                <option>Tarjeta de Crédito Mastercard</option>
+                <option>Tarjeta de Crédito VISA</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label for="movimiento" class="form-label">Tipo de movimiento:</label>
+              <select id="movimiento" class="form-select">
+                <option selected>Todos los tipos</option>
+                <option>Transferencia</option>
+                <option>Compras</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label for="fecha-desde" class="form-label">Fecha desde:</label>
+              <input type="date" id="fecha-desde" class="form-control">
+            </div>
+            <div class="col-md-4">
+              <label for="fecha-hasta" class="form-label">Fecha hasta:</label>
+              <input type="date" id="fecha-hasta" class="form-control">
+            </div>
+            <div class="col-md-4">
+              <label for="monto-desde" class="form-label">Monto desde:</label>
+              <input type="text" id="monto-desde" class="form-control">
+            </div>
+            <div class="col-md-4">
+              <label for="monto-hasta" class="form-label">Monto hasta:</label>
+              <input type="text" id="monto-hasta" class="form-control">
+            </div>
+            <div class="col-12 text-center">
+              <button type="submit" class="btn btn-primary">Buscar</button>
+            </div>
+          </form>
+        </section>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card p-4 mb-3 shadow-sm">
+              <h2 class="h5">Pokepuntos Disponibles</h2>
+              <p>VISA CLÁSICA INTERNACIONAL</p>
+              <p>4101</p>
+              <p class="fw-bold">5,509</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card p-4 mb-3 shadow-sm">
+              <h2 class="h5">Tipo de cambio</h2>
+              <p>Moneda | Compra | Venta</p>
+              <p>EUR | <strong>$1.1800</strong> | <strong>$1.2500</strong></p>
+              <p class="text-muted">Tipo de cambio sujeto a variaciones</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card p-4 mb-3 shadow-sm">
+              <h2 class="h5">Gráfico de Rendimiento</h2>
+              <a href="graficos.html">Ver gráfico completo</a>
+            </div>
+          </div>
+        </div>
       </main>
     </div>
-  </body>
+  </div>
+</body>
 </html>
